@@ -1,0 +1,191 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/33de358e9dcdab49.css" as="style"/><link rel="stylesheet" href="/_next/static/css/33de358e9dcdab49.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-91d7f78b5b4003c8.js" defer=""></script><script src="/_next/static/chunks/main-c077062ff4cba9cc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-a28dfd126423188a.js" defer=""></script><script src="/_next/static/chunks/441-a671c856071d1541.js" defer=""></script><script src="/_next/static/chunks/pages/apidoc/%5Bslug%5D-f32df2eefd75b76b.js" defer=""></script><script src="/_next/static/e_MHXg2tAqlg4H10OXD0m/_buildManifest.js" defer=""></script><script src="/_next/static/e_MHXg2tAqlg4H10OXD0m/_ssgManifest.js" defer=""></script><script src="/_next/static/e_MHXg2tAqlg4H10OXD0m/_middlewareManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><header><div class="Nav"><h1 href="/">Susan</h1><h3 href="/"></h3><h3 href="/"></h3><h3 href="/">Blog</h3><h3 href="/apidocs/">API</h3><h3 href="/samples/">Samples</h3><h3 href="/writings/">Writings</h3><h3 href="/videos/">Videos</h3><h3 href="/about/">About</h3></div></header><main class="container"><a class="btn btn-back" href="/">Go Back</a><div class="card card-page"><h1 class="post-title">Angular Tutorial for Beginners</h1><div class="post-date">Posted on <!-- -->2022-02-014</div><div class="post-body"><div><p>compoonents, reusable, tamplete, </p>
+<p>module, components
+client side routing
+server side routing</p>
+<p>unit testing: testable: I think this is imortatnt
+dependency injection
+isolate the view layer from the modle layer, ModuleViewControlContent</p>
+<p>components in Angular: is a piece of the Application with an associated template. It has a selector and will render the template,  whereever the selector-tag is located. 
+Module instead is a collection of components, directives, pipes and so on.</p>
+<p>This Angular Tutorial is based on the YouTube Videos:
+(<a href="https://youtu.be/k5E2AVpwsko">https://youtu.be/k5E2AVpwsko</a>) this video doesn&#39;t realy talk about angular project, mainly talk about the folder structure, and typeScript</p>
+<p>(<a href="https://youtu.be/WHv1YQUg6ow">https://youtu.be/WHv1YQUg6ow</a>) This is a good tutorial teaching you how to creat a project. through the build project process, let the audien at least know how to creat one project, understand how to use the control, view, content. even it only involves three files: css, html, ts. but it looks like it use Javascript, not TypeScript</p>
+<p>What is Angular?
+Angular is a framework for building client applications in HTML, CSS, and JavaScript/TypeScrip</p>
+<p>Why do we need to use Angular?</p>
+<p>Clearn code, beter structure, that means easy to maintain, team work, sustasible, 
+Easy to test.</p>
+<p>Architecture
+front-end: user interface, HTML/CSS, TypeScript Angular
+back-end: Data and Processing---Data + APIs-- business logic</p>
+<p>API 
+HTTP service, or API, 
+endpoint that are accessable via HTTP protocal</p>
+<p>frong-end
+HTML Templates , presentation logic</p>
+<p>IMplementation</p>
+<p>Your First Angular App</p>
+<p>install node</p>
+<pre><code class="language-shell">node --version
+v6.10.3
+</code></pre>
+<p>I am using node version minimal version 6.9</p>
+<p>NOde package manager - npm
+Angular CLI</p>
+<p>``shell
+npm install -g @angular/CLI Command-line Interface</p>
+<pre><code>
+-g  no it, only install on local folder
+@ ??
+
+for Mac user
+
+``shell
+sudo npm install -g @angular/cli
+</code></pre>
+<p>after installation, type:</p>
+<pre><code class="language-shell">ng --version
+</code></pre>
+<p>You will see:
+<img src="/static/images/angular/angular-version.png" alt="angular version"></p>
+<p>Now you have angular installed. 
+Let&#39;s create a new angular project.</p>
+<pre><code class="language-shell">ng new hellp-wold
+</code></pre>
+<p>it will ask which styl sheet you would like to use, you can select one from CSS, SCSS, SASS, and Less.
+Then it will continue to download and install required packages from third parties.
+When it&#39;s done, you can see a folder named &#39;Hello world&#39; in your current folder. the project is successfully created.
+to start coding, we need a code editor, we are going to use VS code, or visual studio code, it&#39;s a beutiful cross platform lightweight code editor.</p>
+<p>for mac, use cmd+shift_P, for windows, use ctl+shift+P
+opened command pilot.</p>
+<p>type: code and select &quot;Shell Command: Install &#39;code&#39; command in PATH&quot;
+with this, we can go to the terminal and go to the folder we just created our new projec. simply type: &#39;Code . &#39;</p>
+<p>in the project folder, type:</p>
+<pre><code class="language-shell">ng serve
+</code></pre>
+<p>Then, go to &#39;localhost:4200&#39;, you will be able to see that your new project is running.</p>
+<p>Now, let&#39;s see the structure of our angular project.</p>
+<p>e2e: end to end- where to write end to end test, </p>
+<p>node_modules - stor all third parties libaries; we are not going to deploy this folder to the server
+src - app - modules and components
+src - assets - icons, images, etc.
+src - environments - production environment and develop environment</p>
+<p>index.html</p>
+<p>main.ts file, start point of our application, bootstrapMoudule(AppModule)</p>
+<p>polyfills.ts - scripts, fill the gap between javaScrip and angular
+style.css
+test.ts </p>
+<p>angular-cli.json
+editorconfig - team work, have the same settings</p>
+<p>jarma.conf.js - test runner
+package, json - standar file, every nodejs project has.
+depnedencies:
+devDependencies:
+tsconfig.json - typeScrip compliler
+tslint.json - static analys tool.</p>
+<p>That is all about the folder structure for now. let&#39;s go to the app.</p>
+<p>got to the src/app folder:</p>
+<p>angular use webpack which is build automation tool.</p>
+<p>Hot module reloading?Replacement (HMR)</p>
+<p>About Angular version 
+Angular JS 1 - 2010
+Angular 2 - 2016 - TypeScrip - beeter framework, cleaner
+Angular 4 - </p>
+<p>@angular/core, compiler, http, router
+@angular/router 3.</p>
+<p>course Structure:
+Essentials, - 
+Advanced Topics, - unit testing, integrate testing
+Final Project - build one module application, shoping cart, </p>
+<p>fire base, </p>
+<p><strong>TypeScript Fundamentals</strong></p>
+<ul>
+<li>Strong typing</li>
+<li>Object-oriented features</li>
+<li>Compile-time errors</li>
+<li>Great tooling</li>
+</ul>
+<p>Transpile from TypeScript to Javascript</p>
+<p>INstall TypeScrip</p>
+<pre><code class="language-shell">sudo npm install -g typecript
+</code></pre>
+<p>Type:</p>
+<pre><code class="language-shell">tsc --version
+version 4.5.5
+</code></pre>
+<p>Types in TypeScrip:</p>
+<p>number - integer, floating
+boolean
+string
+any
+number []
+let f: any[] = [1, true, &#39;a&#39;, false];
+const Colorred = 1;
+const ColorBlue = 2;
+enum Color {Red, Green, Blue }
+le backgroundColor = Color. Red;</p>
+<p><strong>Access modifier</strong>
+public - default -
+private - only can be accessed from inside class
+protected - </p>
+<p>Access Levels</p>
+<table>
+<thead>
+<tr>
+<th>Modifier</th>
+<th>Class</th>
+<th>Package</th>
+<th>Subclass</th>
+<th>World</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>no modifier</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+<td>N</td>
+</tr>
+<tr>
+<td>private</td>
+<td>Y</td>
+<td>N</td>
+<td>N</td>
+<td>N</td>
+</tr>
+</tbody></table>
+<p><strong>Angular Fundamentls</strong></p>
+<ul>
+<li>Components</li>
+<li>Templates</li>
+<li>Directives</li>
+<li>Services</li>
+</ul>
+<p>Building Blocks of Angular Apps
+Components - Data, HTMl,Logic -- components based App
+Modules - a group of components.
+create module
+regist module
+use module</p>
+<pre><code class="language-shell">ng g c course
+</code></pre>
+<p>angular uses cli, it will create all files needed
+this way, we don&#39;t need to remember to create and register our new components.</p>
+<p>Templates: </p>
+<p>quick way to create service using angular cli
+ng g s email</p>
+</div></div><div class="blogNav"><button class="nextBlog" href="/apidoc/ws_restfulapi_explanation/">Next</button></div></div></main><div class="footericon"><a href="https://www.linkedin.com/in/speng6/" target="_blank" rel="noopener noreferrer"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27188%27%20height=%27190%27/%3e"/></span><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/><noscript><img alt="" srcSet="_next/static/media/linkedinicon.c7b2e572.png?imwidth=256 1x, _next/static/media/linkedinicon.c7b2e572.png?imwidth=384 2x" src="_next/static/media/linkedinicon.c7b2e572.png?imwidth=384" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span></a>    <a href="https://github.com/susanpeng" target="_blank" rel="noopener noreferrer"><span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27194%27%20height=%27190%27/%3e"/></span><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/><noscript><img alt="" srcSet="_next/static/media/githubicon.6b43b710.png?imwidth=256 1x, _next/static/media/githubicon.6b43b710.png?imwidth=640 2x" src="_next/static/media/githubicon.6b43b710.png?imwidth=640" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span></a></div><div class="ccicon"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a></div><div class="cctext">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons <br/>Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div><div class="footer"><h4>©2022♥Susan</h4></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"blognum":1,"key1":0,"slugprev":"ws_restfulapi_explanation","frontmatter":{"title":"Angular Tutorial for Beginners","date":"2022-02-014","lastmod":"2022-02-14","draft":"true","tags":["Angular","Tutorial","Beginner"],"categories":["Samples"],"author":"Susan"},"slug":"ws_restfulapi_explanation","content":"\ncompoonents, reusable, tamplete, \n\nmodule, components\nclient side routing\nserver side routing\n\nunit testing: testable: I think this is imortatnt\ndependency injection\nisolate the view layer from the modle layer, ModuleViewControlContent\n\ncomponents in Angular: is a piece of the Application with an associated template. It has a selector and will render the template,  whereever the selector-tag is located. \nModule instead is a collection of components, directives, pipes and so on.\n\n\n\nThis Angular Tutorial is based on the YouTube Videos:\n(https://youtu.be/k5E2AVpwsko) this video doesn't realy talk about angular project, mainly talk about the folder structure, and typeScript\n\n(https://youtu.be/WHv1YQUg6ow) This is a good tutorial teaching you how to creat a project. through the build project process, let the audien at least know how to creat one project, understand how to use the control, view, content. even it only involves three files: css, html, ts. but it looks like it use Javascript, not TypeScript\n\n\nWhat is Angular?\nAngular is a framework for building client applications in HTML, CSS, and JavaScript/TypeScrip\n\nWhy do we need to use Angular?\n\nClearn code, beter structure, that means easy to maintain, team work, sustasible, \nEasy to test.\n\nArchitecture\nfront-end: user interface, HTML/CSS, TypeScript Angular\nback-end: Data and Processing---Data + APIs-- business logic\n\nAPI \nHTTP service, or API, \nendpoint that are accessable via HTTP protocal\n\n\nfrong-end\nHTML Templates , presentation logic\n\nIMplementation\n\n\nYour First Angular App\n\ninstall node\n```shell\nnode --version\nv6.10.3\n```\n\nI am using node version minimal version 6.9\n\nNOde package manager - npm\nAngular CLI\n\n``shell\nnpm install -g @angular/CLI Command-line Interface\n```\n\n-g  no it, only install on local folder\n@ ??\n\nfor Mac user\n\n``shell\nsudo npm install -g @angular/cli\n```\n\nafter installation, type:\n```shell\nng --version\n```\nYou will see:\n![angular version](/static/images/angular/angular-version.png)\n\nNow you have angular installed. \nLet's create a new angular project.\n```shell\nng new hellp-wold\n```\nit will ask which styl sheet you would like to use, you can select one from CSS, SCSS, SASS, and Less.\nThen it will continue to download and install required packages from third parties.\nWhen it's done, you can see a folder named 'Hello world' in your current folder. the project is successfully created.\nto start coding, we need a code editor, we are going to use VS code, or visual studio code, it's a beutiful cross platform lightweight code editor.\n\n\nfor mac, use cmd+shift_P, for windows, use ctl+shift+P\nopened command pilot.\n\ntype: code and select \"Shell Command: Install 'code' command in PATH\"\nwith this, we can go to the terminal and go to the folder we just created our new projec. simply type: 'Code . '\n\nin the project folder, type:\n```shell\nng serve\n```\nThen, go to 'localhost:4200', you will be able to see that your new project is running.\n\nNow, let's see the structure of our angular project.\n\ne2e: end to end- where to write end to end test, \n\nnode_modules - stor all third parties libaries; we are not going to deploy this folder to the server\nsrc - app - modules and components\nsrc - assets - icons, images, etc.\nsrc - environments - production environment and develop environment\n\nindex.html\n\nmain.ts file, start point of our application, bootstrapMoudule(AppModule)\n\npolyfills.ts - scripts, fill the gap between javaScrip and angular\nstyle.css\ntest.ts \n\nangular-cli.json\neditorconfig - team work, have the same settings\n\njarma.conf.js - test runner\npackage, json - standar file, every nodejs project has.\ndepnedencies:\ndevDependencies:\ntsconfig.json - typeScrip compliler\ntslint.json - static analys tool.\n\nThat is all about the folder structure for now. let's go to the app.\n\ngot to the src/app folder:\n\nangular use webpack which is build automation tool.\n\nHot module reloading?Replacement (HMR)\n\nAbout Angular version \nAngular JS 1 - 2010\nAngular 2 - 2016 - TypeScrip - beeter framework, cleaner\nAngular 4 - \n\n@angular/core, compiler, http, router\n@angular/router 3.\n\n\n\ncourse Structure:\nEssentials, - \nAdvanced Topics, - unit testing, integrate testing\nFinal Project - build one module application, shoping cart, \n\nfire base, \n\n\n**TypeScript Fundamentals**\n- Strong typing\n- Object-oriented features\n- Compile-time errors\n- Great tooling\n\nTranspile from TypeScript to Javascript\n\nINstall TypeScrip\n```shell\nsudo npm install -g typecript\n```\nType:\n```shell\ntsc --version\nversion 4.5.5\n```\n\nTypes in TypeScrip:\n\nnumber - integer, floating\nboolean\nstring\nany\nnumber []\nlet f: any[] = [1, true, 'a', false];\nconst Colorred = 1;\nconst ColorBlue = 2;\nenum Color {Red, Green, Blue }\nle backgroundColor = Color. Red;\n\n**Access modifier**\npublic - default -\nprivate - only can be accessed from inside class\nprotected - \n\nAccess Levels\n\n\n| Modifier | Class | Package | Subclass | World |\n| -------- | ----- | ------- | -------- | ----- |\n| public | Y | Y | Y | Y |\n| protected\t| Y\t| Y |\tY |\tN |\n| no modifier\t| Y |\tY |\tN |\tN |\n| private |\tY\t| N\t| N\t| N |\n\n\n\n**Angular Fundamentls**\n- Components\n- Templates\n- Directives\n- Services\n\nBuilding Blocks of Angular Apps\nComponents - Data, HTMl,Logic -- components based App\nModules - a group of components.\ncreate module\nregist module\nuse module\n\n```shell\nng g c course\n```\n\nangular uses cli, it will create all files needed\nthis way, we don't need to remember to create and register our new components.\n\nTemplates: \n\n\nquick way to create service using angular cli\nng g s email\n"},"__N_SSG":true},"page":"/apidoc/[slug]","query":{"slug":"angular_tutoral"},"buildId":"e_MHXg2tAqlg4H10OXD0m","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
