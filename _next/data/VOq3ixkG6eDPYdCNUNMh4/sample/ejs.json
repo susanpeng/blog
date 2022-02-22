@@ -1,0 +1,1 @@
+{"pageProps":{"blognum":9,"key1":0,"slugprev":"complete_a_project","frontmatter":{"title":"Get Started with ejs","date":"2022-01-31","lastmod":"2022-01-31","draft":"true","tags":["UsersManual","OnlineHelp","WritingSample"],"categories":["Samples"],"author":"Susan"},"slug":"complete_a_project","content":"```shell\nnpm install ejs --save\n```\n"},"__N_SSG":true}
